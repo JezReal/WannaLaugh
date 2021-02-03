@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/jokeSetupFragment">
+
+    <fragment
+        android:id="@+id/jokeSetupFragment"
+        android:name="io.github.jezreal.wannalaugh.ui.JokeSetupFragment"
+        android:label="@string/card_title"
+        tools:layout="@layout/fragment_joke_setup">
+        <action
+            android:id="@+id/action_jokeSetupFragment_to_jokePunchlineFragment"
+            app:destination="@id/jokePunchlineFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/jokePunchlineFragment"
+        android:name="io.github.jezreal.wannalaugh.ui.JokePunchlineFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_joke_punchline" />
+</navigation>
